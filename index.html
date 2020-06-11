@@ -3,35 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
     <title>Number Guesser</title>
   </head>
   <body>
-    <div id="app" class="container center-align">
+    <div id="app" class="container">
       <h1>Number Guesser</h1>
-      <p>
-        I'm thinking of a number between 1 and 10; enter your guess and see if
-        you guessed right:
-      </p>
-      <form id="guess-form">
-        <div class="input-field">
-          <input
-            type="number"
-            id="guess"
-            value=""
-            placeholder="Enter a number between 1 and 10"
-            aria-placeholder="Enter a number between 1 and 10 for your first guess"
-            class="center-align"
-          />
-        </div>
-        <div class="result"></div>
-        <button type="submit">GUESS</button>
-      </form>
+      <div id="game">
+        <p>
+          I'm thinking of a number between
+          <span class="min-num"></span>
+          and
+          <span class="max-num"></span>; enter your guess and see if you guessed right:
+        </p>
+            <input
+              type="number"
+              id="input-field"
+              value=""
+              placeholder="Enter your guess..."
+              aria-placeholder="Enter your number guess."
+              class="u-full-width"
+            />
+            <p class="result"></p>
+            <button id="guess-btn" type="submit">GUESS</button>
+          </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
